@@ -1,0 +1,3 @@
+[submodule "lib/saber-promise"]
+	path = lib/saber-promise
+	url = https://github.com/ecomfe/saber-promise.git
