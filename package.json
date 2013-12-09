@@ -1,15 +1,13 @@
 {
 	"name": "promise-perf-tests",
 	"version": "0.3.2",
+    "description": "关于各Promise实现的基本性能测试",
 	"dependencies": {
-		"when": "",
-		"avow": "",
-		"q": "",
-		"deferred": "",
-		"laissez-faire": "",
-		"rsvp": "",
-		"jquery-browserify": "",
-		"jsdom": ">= 0.2.18"
+		"when": "~2.7.0",
+		"avow": "~2.0.1",
+		"q": "~0.9.7",
+		"deferred": "~0.6.6",
+		"rsvp": "2.0.4"
 	},
 	"scripts": {
 		"test": "./bin/run.sh"
