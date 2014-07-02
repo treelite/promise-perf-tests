@@ -22,7 +22,7 @@ $ npm test
 
 MacBook Pro (with Retina), OS X 10.9, 2.4 GHz Intel Core i7, 8 GB 1600 MHz DDR3
 
-* [saber-promise](https://github.com/ecomfe/saber-promise) 0.2.1
+* [saber-promise](https://github.com/ecomfe/saber-promise) 0.1.2
 * [when](https://github.com/cujojs/when) 2.7.0
 * [deferred](https://github.com/medikoo/deferred) 0.6.6
 * [Q](https://github.com/kriskowal/q) 0.9.7
@@ -36,87 +36,86 @@ MacBook Pro (with Retina), OS X 10.9, 2.4 GHz Intel Core i7, 8 GB 1600 MHz DDR3
 Test: promise-fulfill x 10000
 ----------------------------------------------------------
 Name      Time ms   Avg ms   Diff %
-when           13   0.0013        -
-q              14   0.0014     7.69
-saber          15   0.0015    15.38
-deferred       30   0.0030   130.77
-rsvp           42   0.0042   223.08
-avow           66   0.0066   407.69
-[Q] Unhandled rejection reasons (should be empty): [ '(no stack) 0' ]
+deferred        8   0.0008        -
+saber          20   0.0020   150.00
+when           20   0.0020   150.00
+avow           20   0.0020   150.00
+q              61   0.0061   662.50
+rsvp           86   0.0086   975.00
 
 ==========================================================
 Test: promise-reject x 10000
 ----------------------------------------------------------
 Name      Time ms   Avg ms   Diff %
-saber          13   0.0013        -
-q              20   0.0020    53.85
-rsvp           41   0.0041   215.38
-when           47   0.0047   261.54
-avow           61   0.0061   369.23
-deferred       87   0.0087   569.23
+saber           7   0.0007        -
+avow           33   0.0033   371.43
+when           39   0.0039   457.14
+q              57   0.0057   714.29
+deferred       84   0.0084  1100.00
+rsvp           88   0.0088  1157.14
 
 ==========================================================
 Test: promise-sequence x 10000
 ----------------------------------------------------------
 Name      Time ms   Avg ms   Diff %
-deferred       14   0.0014        -
-when          108   0.0108   671.43
-saber         110   0.0110   685.71
-avow          175   0.0175  1150.00
-q             220   0.0220  1471.43
-rsvp          317   0.0317  2164.29
+deferred       15   0.0015        -
+when           70   0.0070   366.67
+saber         112   0.0112   646.67
+q             175   0.0175  1066.67
+avow          223   0.0223  1386.67
+rsvp          354   0.0354  2260.00
 
 ==========================================================
 Test: defer-create x 10000
 ----------------------------------------------------------
 Name      Time ms   Avg ms   Diff %
-saber           1   0.0001        -
-avow            2   0.0002   100.00
-q              16   0.0016  1500.00
-rsvp           21   0.0021  2000.00
-when           29   0.0029  2800.00
-deferred       55   0.0055  5400.00
+saber           2   0.0002        -
+avow            4   0.0004   100.00
+when           17   0.0017   750.00
+q              20   0.0020   900.00
+rsvp           34   0.0034  1600.00
+deferred       42   0.0042  2000.00
 
 ==========================================================
 Test: defer-fulfill x 10000
 ----------------------------------------------------------
 Name      Time ms   Avg ms   Diff %
-saber          48   0.0048        -
-avow           62   0.0062    29.17
-when           66   0.0066    37.50
-rsvp          134   0.0134   179.17
-q             215   0.0215   347.92
-deferred      323   0.0323   572.92
-[Q] Unhandled rejection reasons (should be empty): [ '(no stack) 0' ]
+avow           60   0.0060        -
+when           62   0.0062     3.33
+saber          85   0.0085    41.67
+rsvp          183   0.0183   205.00
+q             222   0.0222   270.00
+deferred      296   0.0296   393.33
 
 ==========================================================
 Test: defer-reject x 10000
 ----------------------------------------------------------
 Name      Time ms   Avg ms   Diff %
-avow           35   0.0035        -
-saber          64   0.0064    82.86
-rsvp          105   0.0105   200.00
-when          112   0.0112   220.00
-q             257   0.0257   634.29
-deferred      374   0.0374   968.57
+avow           53   0.0053        -
+saber          66   0.0066    24.53
+when           75   0.0075    41.51
+rsvp          202   0.0202   281.13
+q             235   0.0235   343.40
+deferred      413   0.0413   679.25
 
 ==========================================================
 Test: defer-sequence x 10000
 ----------------------------------------------------------
 Name      Time ms   Avg ms   Diff %
-saber         117   0.0117        -
-when          126   0.0126     7.69
-deferred      157   0.0157    34.19
-avow          198   0.0198    69.23
-q             301   0.0301   157.26
-rsvp          329   0.0329   181.20
+when          115   0.0115        -
+saber         155   0.0155    34.78
+deferred      167   0.0167    45.22
+avow          210   0.0210    82.61
+q             276   0.0276   140.00
+rsvp          314   0.0314   173.04
 
 ==========================================================
 Test: map x 10000
 ----------------------------------------------------------
 Name      Time ms   Avg ms   Diff %
-deferred       19   0.0019        -
-when          159   0.0159   736.84
+saber           4   0.0004        -
+deferred       21   0.0021   425.00
+when          183   0.0183  4475.00
 
 ==========================================================
 Test: reduce-small x 609
@@ -126,6 +125,7 @@ stack overflow for an array length >= 610
 Name      Time ms   Avg ms   Diff %
 when            6   0.0099        -
 deferred        6   0.0099        -
+saber          14   0.0230   133.33
 
 ==========================================================
 Test: reduce-large x 10000
@@ -133,6 +133,7 @@ NOTE: in node v0.8.14, deferred.reduce causes a
 stack overflow for an array length >= 610
 ----------------------------------------------------------
 Name      Time ms   Avg ms   Diff %
-deferred       36   0.0036        -
-when          154   0.0154   327.78
+deferred       41   0.0041        -
+saber          64   0.0064    56.10
+when          178   0.0178   334.15
 ```
